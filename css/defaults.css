@@ -71,16 +71,96 @@ html {
 }
 
 /*
-  VARIABLES
+  Themes
 */
 
-:root {
+/* :root {
   --color-1: #f6c453;
   --color-2: #fefbe9;
   --color-3: #f0a04b;
   --color-4: #183a1d;
   --color-5: #e1eedd;
   --color-6: #dc4600;
+
+  color-scheme: light;
+}
+
+.darkside {
+  --color-6: #4f8b00;
+  --color-5: #fefbe9;
+  --color-4: #383837;
+  --color-3: #5e605e;
+  --color-2: #4c4c4b;
+  --color-1: #1d1d1d;
+
+  color-scheme: dark;
+} */
+
+:root[data-theme="light"] {
+  --text: #08120c;
+  --background: #f0f9f3;
+  --primary: #43c773;
+  --secondary: #92e3ae;
+  --accent: #67e093;
+  --badge: #dc4600;
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+:root[data-theme="dark"] {
+  --text: #edf7f1;
+  --background: #060f09;
+  --primary: #38bc69;
+  --secondary: #1c6d39;
+  --accent: #1f984c;
+  --badge: #dc4600;
+  --shadow: rgba(255, 255, 255, 0.25);
+}
+
+/*
+  FONT-Setting
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Outfit:700|outfit:400");
+
+body {
+  font-family: "outfit";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Outfit";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 1.802rem; /* 28.8px */
+}
+
+h2 {
+  font-size: 1.602rem; /* 25.6px */
+}
+
+h3 {
+  font-size: 1.424rem; /* 22.72px */
+}
+
+h4 {
+  font-size: 1.266rem; /* 20.32px */
+}
+
+h5 {
+  font-size: 1.125rem; /* 18.08px */
+}
+
+small {
+  font-size: 0.889rem; /* 14.24px */
 }
 
 /*
@@ -93,7 +173,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-repeat: repeat;
-  background: var(--color-1);
+  background: var(--background);
 
   &::before {
     content: "";
@@ -105,5 +185,15 @@ body {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150"><text x="25" y="75" font-family="Arial" font-size="24" fill="rgba(0,0,0, .15)">miToe&apos;s QuizZ</text></svg>');
     transform: rotate(-45deg);
     z-index: -1;
+  }
+}
+
+html {
+  &[data-theme="dark"] {
+    body {
+      &::before {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150"><text x="25" y="75" font-family="Arial" font-size="24" fill="rgba(255,255,255, .1)">miToe&apos;s QuizZ</text></svg>');
+      }
+    }
   }
 }
