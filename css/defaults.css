@@ -95,6 +95,9 @@ html {
 
   color-scheme: dark;
 } */
+:root {
+  --border-radius: 0.5rem;
+}
 
 :root[data-theme="light"] {
   --text: #08120c;
