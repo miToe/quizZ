@@ -7,9 +7,9 @@ form.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent default form submission
 
   // Read data from input fields
-  const question = document.getElementById("question").value;
-  const answer = document.getElementById("answer").value;
-  const tag = document.getElementById("tag").value.split(",");
+  const question = document.querySelector("[data-js='question']").value;
+  const answer = document.querySelector("[data-js='answer']").value;
+  const tag = document.querySelector("[data-js='tag']").value.split(",");
 
   // Generate DOM elements for card
   const card = document.createElement("section");
@@ -28,10 +28,11 @@ form.addEventListener("submit", function (event) {
 
   const submitButton = document.createElement("button");
   submitButton.textContent = "Show";
+  submitButton.setAttribute("data-js", "answer");
   card.appendChild(submitButton);
 
   const answerElement = document.createElement("p");
-  answerElement.classList.add("answer", "hidden");
+  answerElement.classList.add("answer", "hide");
   answerElement.textContent = answer;
   card.appendChild(answerElement);
 
@@ -63,4 +64,6 @@ form.addEventListener("submit", function (event) {
   document.getElementById("question").value = "";
   document.getElementById("answer").value = "";
   document.getElementById("tag").value = "";
+  setupBookmarkToggle();
+  setupAnswerToggle();
 });

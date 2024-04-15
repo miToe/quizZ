@@ -1,31 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Bookmark it!
+const setupBookmarkToggle = () => {
+  const bookmarkToggleButtons = document.querySelectorAll(
+    '[data-js="bookmark"]'
+  );
 
-  const bookmark_toggle = document.querySelectorAll('[data-js="bookmark"]');
-
-  bookmark_toggle.forEach((element) => {
-    element.addEventListener("click", () => {
-      console.log("yes!");
-      element.classList.toggle("active");
+  bookmarkToggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
     });
   });
+};
 
-  // Show/Hide Answer
+const setupAnswerToggle = () => {
+  const answerToggleButtons = document.querySelectorAll('[data-js="answer"]');
 
-  const answer_toggle_button = document.querySelectorAll('[data-js="answer"]');
-
-  answer_toggle_button.forEach((element) => {
-    element.addEventListener("click", () => {
-      const answer_toggle = document.querySelector(
+  answerToggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const answerToggle = document.querySelector(
         '[data-js="this-is-the-answer"]'
       );
-      console.log("test");
-      if (element.innerHTML === "Show") {
-        element.innerHTML = "Hide";
+      if (button.innerHTML === "Show") {
+        button.innerHTML = "Hide";
       } else {
-        element.innerHTML = "Show";
+        button.innerHTML = "Show";
       }
-      element.nextElementSibling.classList.toggle("hide");
+      button.nextElementSibling.classList.toggle("hide");
     });
   });
-});
+};
+
+setupBookmarkToggle();
+setupAnswerToggle();
