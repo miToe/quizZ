@@ -83,6 +83,11 @@ main {
     border-top-width: 6px;
     border-color: var(--badge) var(--badge) transparent var(--badge);
   }
+
+  &.active::before {
+    color: var(--badge-active);
+    text-shadow: none;
+  }
 }
 
 h1 {

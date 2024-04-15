@@ -112,6 +112,7 @@ html {
   --secondary: #09170e;
   --accent: #1f984c;
   --badge: #fccd87;
+  --badge-active: purple;
   --shadow: rgba(255, 255, 255, 0.25);
 }
 
@@ -196,4 +197,8 @@ html {
       }
     }
   }
+}
+
+.hide {
+  display: none;
 }

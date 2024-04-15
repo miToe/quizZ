@@ -6,7 +6,8 @@
     <title>mitoes QuizZ</title>
     <link rel="stylesheet" href="./css/defaults.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="js/darkthemetoggle.js" defer></script>
+    <script src="./js/toggles.js" defer></script>
+    <script src="./js/darkthemetoggle.js" defer></script>
   </head>
   <body>
     <div class="area">
@@ -28,9 +29,16 @@
     </header>
     <main>
       <section class="card">
-        <label class="bookmark" aria-label="Bookmark"></label>
+        <label
+          class="bookmark"
+          aria-label="Bookmark"
+          data-js="bookmark"
+        ></label>
         <h2 class="question">What property flips the axes in flexbox?</h2>
-        <button>Show answer</button>
+        <button data-js="answer">Show</button>
+        <p class="anwser hide" data-js="this-is-the-answer">
+          Here is your answer!
+        </p>
         <ul class="categories">
           <li>#css</li>
           <li>#flexbox</li>
@@ -38,29 +46,16 @@
         </ul>
       </section>
       <section class="card">
-        <label class="bookmark" aria-label="Bookmark"></label>
+        <label
+          class="bookmark"
+          aria-label="Bookmark"
+          data-js="bookmark"
+        ></label>
         <h2 class="question">What property flips the axes in flexbox?</h2>
-        <button>Show answer</button>
-        <ul class="categories">
-          <li>#css</li>
-          <li>#flexbox</li>
-          <li>#html</li>
-        </ul>
-      </section>
-      <section class="card">
-        <label class="bookmark" aria-label="Bookmark"></label>
-        <h2 class="question">What property flips the axes in flexbox?</h2>
-        <button>Show answer</button>
-        <ul class="categories">
-          <li>#css</li>
-          <li>#flexbox</li>
-          <li>#html</li>
-        </ul>
-      </section>
-      <section class="card">
-        <label class="bookmark" aria-label="Bookmark"></label>
-        <h2 class="question">What property flips the axes in flexbox?</h2>
-        <button>Show answer</button>
+        <button data-js="answer">Show</button>
+        <p class="anwser hide" data-js="this-is-the-answer">
+          Here is your answer!
+        </p>
         <ul class="categories">
           <li>#css</li>
           <li>#flexbox</li>
