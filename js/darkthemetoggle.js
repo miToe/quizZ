@@ -1,31 +1,3 @@
-// // Überprüfen, ob der Wert im Web Storage bereits vorhanden ist
-// if (localStorage.getItem("darkmode") === "1") {
-//   document.body.classList.add("darkside"); // Füge die Klasse hinzu, um die Seite zu markieren
-//   document.addEventListener("DOMContentLoaded", function () {
-//     document.getElementById("darkmode").checked = true;
-//   });
-// }
-
-// // Setze den Status der Checkbox basierend auf dem Wert im Web Storage
-// document.addEventListener("DOMContentLoaded", function () {
-//   if (localStorage.getItem("darkmode") === "1") {
-//     document.getElementById("darkmode").checked = true;
-//   }
-// });
-
-// // Event-Listener für die Checkbox
-// document.getElementById("darkmode").addEventListener("change", function () {
-//   if (this.checked) {
-//     // Wenn die Checkbox aktiviert ist, setze den Wert im Web Storage auf 1
-//     localStorage.setItem("darkmode", "1");
-//     document.body.classList.add("darkside"); // Füge die Klasse hinzu, um die Seite zu markieren
-//   } else {
-//     // Wenn die Checkbox deaktiviert ist, entferne den Wert aus dem Web Storage
-//     localStorage.removeItem("darkmode");
-//     document.body.classList.remove("darkside"); // Entferne die Klasse, um die Seite zu markieren
-//   }
-// });
-
 const toggle = document.querySelector("[data-js=darkmode]");
 
 let storedTheme =
