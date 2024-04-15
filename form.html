@@ -12,6 +12,7 @@
     <script src="./js/darkthemetoggle.js" defer></script>
     <script src="./js/questionform.js" defer></script>
     <script src="./js/toggles.js" defer></script>
+    <script src="./js/counter.js" defer></script>
   </head>
   <body>
     <div class="area">
@@ -45,6 +46,7 @@
               placeholder="Your question"
               aria-describedby="your question"
             ></textarea>
+            <p><span data-js="charCount">150</span> characters left</p>
           </fieldset>
           <fieldset>
             <legend>Your answer:</legend>
@@ -55,6 +57,7 @@
               placeholder="Your answer"
               aria-describedby="your answer"
             ></textarea>
+            <p><span data-js="charCount">150</span> characters left</p>
           </fieldset>
           <fieldset>
             <label for="tag">Tag:</label>
