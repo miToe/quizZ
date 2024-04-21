@@ -26,10 +26,10 @@ form.addEventListener("submit", function (event) {
   questionElement.textContent = question;
   card.appendChild(questionElement);
 
-  const submitButton = document.createElement("button");
-  submitButton.textContent = "Show";
-  submitButton.setAttribute("data-js", "answer");
-  card.appendChild(submitButton);
+  const showButton = document.createElement("button");
+  showButton.textContent = "Show";
+  showButton.setAttribute("data-js", "answer");
+  card.appendChild(showButton);
 
   const answerElement = document.createElement("p");
   answerElement.classList.add("answer", "hide");
